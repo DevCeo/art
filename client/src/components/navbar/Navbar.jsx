@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const history = useHistory();
+  const goToMain = () => {
+    history.push("/");
+  };
   return (
     <section className={styles.container}>
       <ul className={styles.links}>
-        <li className={styles.link}>Login</li>
-        <li className={styles.link}>Signin</li>
+        <Link to="/login">
+          <li className={styles.link}>Login</li>
+        </Link>
+        <Link to="/signup">
+          <li className={styles.link}>Signup</li>
+        </Link>
       </ul>
       <div className={styles.logo}>
         <img
           className={styles.logoImg}
           src="../../../images/logo.png"
           alt="logo"
+          onClick={goToMain}
         />
       </div>
       <div className={styles.category}>

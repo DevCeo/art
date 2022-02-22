@@ -9,7 +9,6 @@
 }
 .links {
   list-style: none;
-  color: #fff;
   display: flex;
   text-align: center;
   flex-direction: row;
@@ -17,12 +16,17 @@
   margin-right: 30px;
 }
 .link {
+  color: #fff;
+  background-color: rgb(28, 28, 28);
   display: inline-block;
   width: auto;
   margin: 20px 10px 0px 25px;
   text-align: right;
   cursor: pointer;
   font-size: 15px;
+}
+.link:hover {
+  font-weight: bolder;
 }
 .logo {
   height: 150px;
@@ -50,4 +54,7 @@
   color: #fff;
   text-align: center;
   cursor: pointer;
+}
+.title:hover {
+  font-weight: bolder;
 }
